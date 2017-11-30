@@ -1,7 +1,7 @@
 {
   "name": "emoji-vote",
   "description": "Emoji vote component.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "dist/emoji-vote.cjs.js",
   "module": "dist/emoji-vote.esm.js",
   "jsnext:main": "dist/emoji-vote.esm.js",
