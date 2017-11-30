@@ -94,6 +94,21 @@ emojiVote will account for the following properties in options:
     ]
     ```
 
+  * `render` The render function for create svg, default:
+
+    ```js
+      function (data, size) {
+        return `
+          <svg class="emoji-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" style="font-size: ${size}px;">
+            <circle class="emoji-facial" cx="32" cy="32" r="30" fill="#fff" stroke="#999" stroke-width="3" />
+            <g class="emoji-facial-features" fill="#999">
+              ${data}
+            </g>
+          </svg>
+        `
+      }
+    ```
+
   * `size` The emoji size, default to `20px`.
 
 ## TODO
