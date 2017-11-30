@@ -1,21 +1,12 @@
 import './style.scss'
 
-// TODO: support custom color
-const emojiConfig = {
-  fill: "#fff",
-  stroke: "#999",
-  dot: "#999",
-  size: 3
-}
-
-const render = (data, size) => {
-  // TODO: support custom svg template
+const defaultRender = (data, size) => {
   return `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" style="font-size: ${size}px;">
-    <circle cx="32" cy="32" r="30" fill="${emojiConfig.fill}" stroke="${emojiConfig.stroke}" stroke-width="${emojiConfig.size}" />
-    <g fill="${emojiConfig.dot}">
-      ${data}
-    </g>
+    <svg class="emoji-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" style="font-size: ${size}px;">
+      <circle class="emoji-facial" cx="32" cy="32" r="30" fill="#fff" stroke="#999" stroke-width="3" />
+      <g class="emoji-facial-features" fill="#999">
+        ${data}
+      </g>
     </svg>
   `
 }
@@ -47,7 +38,8 @@ const defaultEmojis = [
 export default function (el, options = {}) {
   let {
     emojis = defaultEmojis,
-    size = 20
+    size = 20,
+    render = defaultRender
   } = options
   const $el = typeof el === "string" ? document.querySelector(el) : el
   // Create Template

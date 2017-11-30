@@ -6,11 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Emoji Vote</title>
   <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
     .emoji { margin-bottom: 30px; }
   </style>
 </head>
 <body>
-  <div class="emoji">
+  <h2>Default emoji</h2>
+  <div class="emoji emoji1">
     <input type="radio" name="emojiVote" id="emojiVote_dissatisfied" value="dissatisfied">
     <label for="emojiVote_dissatisfied">不满</label>
     <input type="radio" name="emojiVote" id="emojiVote_general" value="general">
@@ -20,7 +22,7 @@
     <input type="radio" name="emojiVote" id="emojiVote_awesome" value="awesome">
     <label for="emojiVote_awesome">满意</label>
   </div>
-  <div class="emoji">
+  <div class="emoji emoji1">
     <input type="radio" name="emojiVote0" id="emojiVote0_dissatisfied" value="dissatisfied" checked>
     <label for="emojiVote0_dissatisfied">不满</label>
     <input type="radio" name="emojiVote0" id="emojiVote0_general" value="general">
@@ -30,7 +32,7 @@
     <input type="radio" name="emojiVote0" id="emojiVote0_awesome" value="awesome">
     <label for="emojiVote0_awesome">满意</label>
   </div>
-  <div class="emoji">
+  <div class="emoji emoji1">
     <input type="radio" name="emojiVote1" id="emojiVote1_dissatisfied" value="dissatisfied">
     <label for="emojiVote1_dissatisfied">不满</label>
     <input type="radio" name="emojiVote1" id="emojiVote1_general" value="general" checked>
@@ -40,7 +42,8 @@
     <input type="radio" name="emojiVote1" id="emojiVote1_awesome" value="awesome">
     <label for="emojiVote1_awesome">满意</label>
   </div>
-  <div class="emoji">
+  <h2>Custom emoji</h2>
+  <div class="emoji emoji2">
     <input type="radio" name="emojiVote2" id="emojiVote2_dissatisfied" value="dissatisfied">
     <label for="emojiVote2_dissatisfied">不满</label>
     <input type="radio" name="emojiVote2" id="emojiVote2_general" value="general">
@@ -50,7 +53,7 @@
     <input type="radio" name="emojiVote2" id="emojiVote2_awesome" value="awesome">
     <label for="emojiVote2_awesome">满意</label>
   </div>
-  <div class="emoji">
+  <div class="emoji emoji2">
     <input type="radio" name="emojiVote3" id="emojiVote3_dissatisfied" value="dissatisfied">
     <label for="emojiVote3_dissatisfied">不满</label>
     <input type="radio" name="emojiVote3" id="emojiVote3_general" value="general">
@@ -62,9 +65,89 @@
   </div>
   <script src="../dist/emoji-vote.cjs.js"></script>
   <script>
-    Array.prototype.slice.call(document.querySelectorAll('.emoji')).forEach((el, i) => {
+    Array.prototype.slice.call(document.querySelectorAll('.emoji1')).forEach((el, i) => {
       emojiVote(el, {
         size: 30
+      })
+    })
+    Array.prototype.slice.call(document.querySelectorAll('.emoji2')).forEach((el, i) => {
+      emojiVote(el, {
+        size: 30,
+        emojis: [
+          `
+          <g transform="matrix(1.25,0,0,-1.25,0,47.5)" id="g10">
+            <g id="g12">
+              <g transform="translate(15,20.5)" id="g24">
+                <path id="path26" style="fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 C 0,-1.934 -1.119,-3.5 -2.5,-3.5 -3.881,-3.5 -5,-1.934 -5,0 -5,1.933 -3.881,3.5 -2.5,3.5 -1.119,3.5 0,1.933 0,0"/>
+              </g>
+              <g transform="translate(28,20.5)" id="g28">
+                <path id="path30" style="fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 C 0,-1.934 -1.119,-3.5 -2.5,-3.5 -3.881,-3.5 -5,-1.934 -5,0 -5,1.933 -3.881,3.5 -2.5,3.5 -1.119,3.5 0,1.933 0,0"/>
+              </g>
+              <g transform="translate(24.4854,9.1211)" id="g32">
+                <path id="path34" style="fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c -0.012,0.044 -1.146,4.379 -5.485,4.379 -4.341,0 -5.475,-4.335 -5.485,-4.379 -0.053,-0.213 0.043,-0.431 0.231,-0.544 0.188,-0.112 0.433,-0.086 0.596,0.06 0.01,0.007 1.014,0.863 4.658,0.863 3.589,0 4.617,-0.83 4.656,-0.863 0.095,-0.09 0.219,-0.137 0.344,-0.137 0.084,0 0.169,0.021 0.246,0.064 C -0.043,-0.445 0.055,-0.218 0,0"/>
+              </g>
+            </g>
+          </g>
+          `,
+          `
+          <g transform="matrix(1.25,0,0,-1.25,0,47.5)" id="g10">
+            <g id="g12">
+              <g transform="translate(15,23)" id="g24">
+                <path id="path26" style="fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c 0,-1.657 -0.96,-3 -2.143,-3 -1.184,0 -2.143,1.343 -2.143,3 0,1.657 0.959,3 2.143,3 C -0.96,3 0,1.657 0,0"/>
+              </g>
+              <g transform="translate(27,23.2002)" id="g28">
+                <path id="path30" style="fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c 0,-1.547 -0.895,-2.8 -2,-2.8 -1.104,0 -2,1.253 -2,2.8 0,1.546 0.896,2.8 2,2.8 1.105,0 2,-1.254 2,-2.8"/>
+              </g>
+              <g transform="translate(23,12)" id="g32">
+                <path id="path34" style="fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c 0,-2.763 -1.792,-5 -4,-5 -2.21,0 -4,2.237 -4,5 0,2.761 1.79,5 4,5 2.208,0 4,-2.239 4,-5"/>
+              </g>
+            </g>
+          </g>
+          `,
+          `
+          <g transform="matrix(1.25,0,0,-1.25,0,47.5)" id="g10">
+            <g id="g12">
+              <g transform="translate(11,24)" id="g24">
+                <path id="path26" style="fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 C 0,0 0,2 2,2 4,2 4,0 4,0 l 0,-2 c 0,0 0,-2 -2,-2 -2,0 -2,2 -2,2 l 0,2 z"/>
+              </g>
+              <g transform="translate(23,24)" id="g28">
+                <path id="path30" style="fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 C 0,0 0,2 2,2 4,2 4,0 4,0 l 0,-2 c 0,0 0,-2 -2,-2 -2,0 -2,2 -2,2 l 0,2 z"/>
+              </g>
+              <g transform="translate(28.335,14.3711)" id="g32">
+                <path id="path34" style="fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c -0.178,0.161 -0.444,0.171 -0.635,0.029 -0.039,-0.029 -3.922,-2.9 -8.7,-2.9 -4.766,0 -8.662,2.871 -8.7,2.9 -0.191,0.142 -0.457,0.13 -0.635,-0.029 -0.177,-0.16 -0.217,-0.424 -0.094,-0.628 0.129,-0.215 3.217,-5.243 9.429,-5.243 6.212,0 9.301,5.028 9.429,5.243 C 0.217,-0.423 0.178,-0.16 0,0"/>
+              </g>
+            </g>
+          </g>
+          `,
+          `
+          <g transform="matrix(1.25,0,0,-1.25,0,47.5)" id="g10">
+            <g id="g12">
+              <g transform="translate(29.457,19.2031)" id="g24">
+                <path id="path26" style="fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c -0.059,0.135 -1.499,3.297 -4.457,3.297 -2.957,0 -4.397,-3.162 -4.457,-3.297 -0.092,-0.207 -0.032,-0.449 0.144,-0.591 0.175,-0.142 0.426,-0.147 0.611,-0.014 0.012,0.009 1.262,0.902 3.702,0.902 2.426,0 3.674,-0.881 3.702,-0.901 0.088,-0.066 0.194,-0.099 0.298,-0.099 0.11,0 0.221,0.037 0.312,0.109 C 0.032,-0.452 0.093,-0.208 0,0"/>
+              </g>
+              <g transform="translate(17.457,19.2031)" id="g28">
+                <path id="path30" style="fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c -0.06,0.135 -1.499,3.297 -4.457,3.297 -2.957,0 -4.397,-3.162 -4.457,-3.297 -0.092,-0.207 -0.032,-0.449 0.144,-0.591 0.176,-0.142 0.427,-0.147 0.61,-0.014 0.013,0.009 1.262,0.902 3.703,0.902 2.426,0 3.674,-0.881 3.702,-0.901 0.088,-0.066 0.194,-0.099 0.298,-0.099 0.11,0 0.221,0.037 0.312,0.109 C 0.033,-0.452 0.092,-0.208 0,0"/>
+              </g>
+              <g transform="translate(19,15)" id="g32">
+                <path id="path34" style="fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c -3.623,0 -6.027,0.422 -9,1 -0.679,0.131 -2,0 -2,-2 0,-4 4.595,-9 11,-9 6.404,0 11,5 11,9 C 11,1 9.679,1.132 9,1 6.027,0.422 3.623,0 0,0"/>
+              </g>
+              <g transform="translate(10,14)" id="g36">
+                <path id="path38" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c 0,0 3,-1 9,-1 6,0 9,1 9,1 0,0 -2,-4 -9,-4 -7,0 -9,4 -9,4"/>
+              </g>
+            </g>
+          </g>
+          `
+        ],
+        render: (data, size) => {
+          return `
+            <svg class="emoji-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.5 47.5" style="font-size: ${size}px;">
+              <circle class="emoji-facial" cx="24" cy="24" r="22" fill="#fff" stroke="#999" stroke-width="2" />
+              <g class="emoji-facial-features">
+                ${data}
+              </g>
+            </svg>
+          `
+        }
       })
     })
   </script>

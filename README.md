@@ -98,5 +98,5 @@ emojiVote will account for the following properties in options:
 
 ## TODO
 
-- [ ] custom emoji svg template.
+- [x] custom emoji svg template.
 - [ ] custom emoji color config

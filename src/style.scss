@@ -4,7 +4,7 @@
   input {
     &:indeterminate {
       ~ label {
-        g {
+        .emoji-facial-features {
           transform: perspective(500px) translate3d(0, 0, 0);
         }
       }
@@ -12,19 +12,20 @@
     &:checked {
       + label {
         color: #664e27;
-        > svg {
-          > circle {
+        .emoji-icon {
+          .emoji-facial {
+            /* TODO: Custom emoji color */
             fill: #ffdd67;
             stroke: #ffdd67;
           }
-          > g {
+          .emoji-facial-features {
             fill: #664e27;
             transform: perspective(500px) translate3d(0, 0, 0) !important;
           }
         }
       }
       ~ label {
-        g {
+        .emoji-facial-features {
           transform: perspective(500px) translate3d(-5px, 0, -5px);
         }
       }
@@ -37,17 +38,17 @@
     color: #999;
     font-size: .7em;
     text-align: center;
-    > svg {
+    .emoji-icon {
       display: block;
       width: 1em;
       height: 1em;
       margin-bottom: 5px;
-      > circle {
+      .emoji-facial {
         fill: #fff;
         stroke: #999;
         transition: all .5s;
       }
-      > g {
+      .emoji-facial-features {
         fill: #999;
         transform: perspective(500px) translate3d(5px, 0, 5px);
         transition: all .5s;
