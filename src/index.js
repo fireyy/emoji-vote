@@ -68,8 +68,8 @@ export default function (el, options = {}) {
         Object.keys(emojis).map(key => {
           let { data, title } = emojis[key]
           return `
-            <input type="radio" name="${name}" id="${key}" value="${key}">
-            <label for="${key}" style="font-size: ${size}px">
+            <input type="radio" name="${name}" id="${name}_${key}" value="${key}">
+            <label for="${name}_${key}" style="font-size: ${size}px">
               ${render(data)}
               <span>${title}</span>
             </label>

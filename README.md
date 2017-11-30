@@ -2,7 +2,12 @@
 
 > Emoji rate component.
 
-Emoji frpm [EmojiOne™ 2](https://emojitwo.github.io/)
+<p style="text-align: center;">
+  <img src="demo.png">
+</p>
+
+- Idea from [Alipay](https://alipay.com)
+- Emoji from [EmojiOne™ 2](https://emojitwo.github.io/)
 
 ## Getting started
 

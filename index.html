@@ -6,13 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../dist/emoji-rate.css">
   <title>Emoji Rate</title>
+  <style>
+    .emoji { margin-bottom: 30px; }
+  </style>
 </head>
 <body>
-  <div id="app"></div>
+  <div class="emoji"></div>
+  <div class="emoji"></div>
+  <div class="emoji"></div>
+  <div class="emoji"></div>
   <script src="../dist/emoji-rate.cjs.js"></script>
   <script>
-    emojiRate("#app", {
-      size: 28
+    Array.prototype.slice.call(document.querySelectorAll('.emoji')).forEach((el, i) => {
+      emojiRate(el, {
+        size: 30,
+        name: `emojiRate${i}`
+      })
     })
   </script>
 </body>
