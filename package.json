@@ -1,0 +1,32 @@
+{
+  "name": "emoji-rate",
+  "description": "Emoji rate component.",
+  "version": "1.0.0",
+  "main": "dist/emoji-rate.cjs.js",
+  "module": "dist/emoji-rate.esm.js",
+  "jsnext:main": "dist/emoji-rate.esm.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "ava": "^0.16.0",
+    "cross-env": "^5.1.1",
+    "eslint": "^3.7.1",
+    "postcss": "^6.0.14",
+    "rollup": "^0.50.0",
+    "rollup-plugin-buble": "^0.18.0",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-livereload": "^0.6.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-sass": "^0.5.3",
+    "rollup-plugin-serve": "^0.4.2"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "cross-env NODE_ENV=development rollup -c -w",
+    "test": "ava --verbose",
+    "lint": "eslint src test"
+  },
+  "files": [
+    "dist"
+  ]
+}

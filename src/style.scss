@@ -1,0 +1,54 @@
+.emoji-rate {
+  display: flex;
+  input {
+    &:checked {
+      + label {
+        > svg {
+          > circle {
+            fill: #ffdd67;
+            stroke: #ffdd67;
+          }
+          > g {
+            fill: #664e27;
+            transform: perspective(500px) translate3d(0, 0, 0) !important;
+          }
+        }
+        span {
+          color: #664e27;
+        }
+      }
+      ~ label {
+        > svg {
+          > g {
+            transform: perspective(500px) translate3d(-5px, 0, -5px);
+          }
+        }
+      }
+    }
+    display: none;
+  }
+  label {
+    padding: 0 5px;
+    color: #999;
+    > svg {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      > circle {
+        fill: #fff;
+        stroke: #999;
+        transition: all .5s;
+      }
+      > g {
+        fill: #999;
+        transform: perspective(500px) translate3d(5px, 0, 5px);
+        transition: all .5s;
+      }
+    }
+    span {
+      display: block;
+      text-align: center;
+      font-size: .35em;
+    }
+  }
+}
