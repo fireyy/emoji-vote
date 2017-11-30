@@ -10,8 +10,8 @@
 
 > Emoji vote component.
 
-- Idea from [Alipay](https://alipay.com)
-- Emoji from [EmojiOne™ 2](https://emojitwo.github.io/)
+- Idea from [支付宝商户评论页的满意度 Emoji 会跟随用户的当前选择看向该 Icon](http://uedetail.com/archives/3832).
+- Emoji from [EmojiOne™ 2](https://emojitwo.github.io/).
 
 ## Install
 
