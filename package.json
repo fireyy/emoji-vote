@@ -1,7 +1,7 @@
 {
   "name": "emoji-rate",
   "description": "Emoji rate component.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "dist/emoji-rate.cjs.js",
   "module": "dist/emoji-rate.esm.js",
   "jsnext:main": "dist/emoji-rate.esm.js",
