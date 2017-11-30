@@ -43,10 +43,23 @@ This exposes the `emojiVote()` function as a global.
 
 ## Usage
 
+```html
+<div class="emoji">
+  <input type="radio" name="emojiVote" id="emojiVote_dissatisfied" value="dissatisfied">
+  <label for="emojiVote_dissatisfied">不满</label>
+  <input type="radio" name="emojiVote" id="emojiVote_general" value="general">
+  <label for="emojiVote_general">一般</label>
+  <input type="radio" name="emojiVote" id="emojiVote_satisfied" value="satisfied">
+  <label for="emojiVote_satisfied">满意</label>
+  <input type="radio" name="emojiVote" id="emojiVote_awesome" value="awesome">
+  <label for="emojiVote_awesome">满意</label>
+</div>
+```
+
 ```js
 import emojiVote from 'emoji-vote'
 
-emojiVote('.emoji-vote', {
+emojiVote('.emoji', {
   size: 30
 })
 ```
