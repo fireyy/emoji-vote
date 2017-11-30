@@ -76,4 +76,27 @@ emoji-vote's API is organized as follows:
 
 emojiVote will account for the following properties in options:
 
+  * `emoji` The emoji data array, default:
+
+    ```js
+    [
+      `
+        <circle cx="20.5" cy="26.6" r="5"/>
+        <circle cx="43.5" cy="26.6" r="5"/>
+        <path d="M23 47.6c5.8-4.8 12.2-4.8 18 0 .7.6 1.3-.4.8-1.3-1.8-3.4-5.3-6.5-9.8-6.5s-8.1 3.1-9.8 6.5c-.5.9.1 1.9.8 1.3"/>
+      `,
+      `
+        <circle cx="32" cy="45.1" r="7"/>
+        <circle cx="20.2" cy="25" r="4.5"/>
+        <circle cx="42.7" cy="25" r="4.5"/>
+      `,
+      ...
+    ]
+    ```
+
   * `size` The emoji size, default to `20px`.
+
+## TODO
+
+- [ ] custom emoji svg template.
+- [ ] custom emoji color config
