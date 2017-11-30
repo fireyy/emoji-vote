@@ -18,13 +18,18 @@
     "rollup-plugin-livereload": "^0.6.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-sass": "^0.5.3",
-    "rollup-plugin-serve": "^0.4.2"
+    "rollup-plugin-serve": "^0.4.2",
+    "standard-version": "^4.2.0",
+    "uglify-js": "^3.2.0"
   },
   "scripts": {
+    "bump": "standard-version",
     "build": "rollup -c",
     "dev": "cross-env NODE_ENV=development rollup -c -w",
-    "test": "ava --verbose",
-    "lint": "eslint src test"
+    "lint": "eslint src test",
+    "minify": "uglifyjs $npm_package_main -cm -o $npm_package_main --source-map base=${npm_package_main}.map",
+    "release": "npm run build && npm run minify && npm run bump && git push --follow-tags origin master && npm publish",
+    "test": "ava --verbose"
   },
   "files": [
     "dist"

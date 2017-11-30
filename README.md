@@ -3,7 +3,7 @@
 > Emoji rate component.
 
 <p style="text-align: center;">
-  <img src="demo.png">
+  <img src="demo.png" width="213">
 </p>
 
 - Idea from [Alipay](https://alipay.com)

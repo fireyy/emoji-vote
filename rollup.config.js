@@ -24,8 +24,7 @@ const config = {
       processor: css => postcss([autoprefixer])
       .process(css)
       .then(result => result.css),
-      output: true,
-      output: 'dist/emoji-rate.css',
+      insert: true
     }),
     buble(),
     resolve(),
