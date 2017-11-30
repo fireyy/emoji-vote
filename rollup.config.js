@@ -12,7 +12,7 @@ const config = {
     {
       file: pkg.main,
       format: 'umd',
-      name: 'emojiRate'
+      name: 'emojiVote'
     },
     {
       file: pkg.module,

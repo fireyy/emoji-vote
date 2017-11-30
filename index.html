@@ -4,22 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Emoji Rate</title>
+  <title>Emoji Vote</title>
   <style>
     .emoji { margin-bottom: 30px; }
   </style>
 </head>
 <body>
-  <div class="emoji"></div>
-  <div class="emoji"></div>
-  <div class="emoji"></div>
-  <div class="emoji"></div>
-  <script src="../dist/emoji-rate.cjs.js"></script>
+  <div class="emoji">
+    <input type="radio" name="emojiVote" id="emojiVote_dissatisfied" value="dissatisfied">
+    <label for="emojiVote_dissatisfied">不满</label>
+    <input type="radio" name="emojiVote" id="emojiVote_general" value="general">
+    <label for="emojiVote_general">一般</label>
+    <input type="radio" name="emojiVote" id="emojiVote_satisfied" value="satisfied">
+    <label for="emojiVote_satisfied">满意</label>
+    <input type="radio" name="emojiVote" id="emojiVote_awesome" value="awesome">
+    <label for="emojiVote_awesome">满意</label>
+  </div>
+  <div class="emoji">
+    <input type="radio" name="emojiVote0" id="emojiVote0_dissatisfied" value="dissatisfied" checked>
+    <label for="emojiVote0_dissatisfied">不满</label>
+    <input type="radio" name="emojiVote0" id="emojiVote0_general" value="general">
+    <label for="emojiVote0_general">一般</label>
+    <input type="radio" name="emojiVote0" id="emojiVote0_satisfied" value="satisfied">
+    <label for="emojiVote0_satisfied">满意</label>
+    <input type="radio" name="emojiVote0" id="emojiVote0_awesome" value="awesome">
+    <label for="emojiVote0_awesome">满意</label>
+  </div>
+  <div class="emoji">
+    <input type="radio" name="emojiVote1" id="emojiVote1_dissatisfied" value="dissatisfied">
+    <label for="emojiVote1_dissatisfied">不满</label>
+    <input type="radio" name="emojiVote1" id="emojiVote1_general" value="general" checked>
+    <label for="emojiVote1_general">一般</label>
+    <input type="radio" name="emojiVote1" id="emojiVote1_satisfied" value="satisfied">
+    <label for="emojiVote1_satisfied">满意</label>
+    <input type="radio" name="emojiVote1" id="emojiVote1_awesome" value="awesome">
+    <label for="emojiVote1_awesome">满意</label>
+  </div>
+  <div class="emoji">
+    <input type="radio" name="emojiVote2" id="emojiVote2_dissatisfied" value="dissatisfied">
+    <label for="emojiVote2_dissatisfied">不满</label>
+    <input type="radio" name="emojiVote2" id="emojiVote2_general" value="general">
+    <label for="emojiVote2_general">一般</label>
+    <input type="radio" name="emojiVote2" id="emojiVote2_satisfied" value="satisfied" checked>
+    <label for="emojiVote2_satisfied">满意</label>
+    <input type="radio" name="emojiVote2" id="emojiVote2_awesome" value="awesome">
+    <label for="emojiVote2_awesome">满意</label>
+  </div>
+  <div class="emoji">
+    <input type="radio" name="emojiVote3" id="emojiVote3_dissatisfied" value="dissatisfied">
+    <label for="emojiVote3_dissatisfied">不满</label>
+    <input type="radio" name="emojiVote3" id="emojiVote3_general" value="general">
+    <label for="emojiVote3_general">一般</label>
+    <input type="radio" name="emojiVote3" id="emojiVote3_satisfied" value="satisfied">
+    <label for="emojiVote3_satisfied">满意</label>
+    <input type="radio" name="emojiVote3" id="emojiVote3_awesome" value="awesome" checked>
+    <label for="emojiVote3_awesome">满意</label>
+  </div>
+  <script src="../dist/emoji-vote.cjs.js"></script>
   <script>
     Array.prototype.slice.call(document.querySelectorAll('.emoji')).forEach((el, i) => {
-      emojiRate(el, {
-        size: 30,
-        name: `emojiRate${i}`
+      emojiVote(el, {
+        size: 30
       })
     })
   </script>

@@ -1,4 +1,4 @@
-.emoji-rate {
+.emoji-vote {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: flex;
   input {
@@ -11,6 +11,7 @@
     }
     &:checked {
       + label {
+        color: #664e27;
         > svg {
           > circle {
             fill: #ffdd67;
@@ -20,9 +21,6 @@
             fill: #664e27;
             transform: perspective(500px) translate3d(0, 0, 0) !important;
           }
-        }
-        span {
-          color: #664e27;
         }
       }
       ~ label {
@@ -37,10 +35,13 @@
     margin: 0 5px;
     padding: 0 5px;
     color: #999;
+    font-size: .7em;
+    text-align: center;
     > svg {
-      display: inline-block;
+      display: block;
       width: 1em;
       height: 1em;
+      margin-bottom: 5px;
       > circle {
         fill: #fff;
         stroke: #999;
@@ -51,11 +52,6 @@
         transform: perspective(500px) translate3d(5px, 0, 5px);
         transition: all .5s;
       }
-    }
-    span {
-      display: block;
-      text-align: center;
-      font-size: .4em;
     }
   }
 }

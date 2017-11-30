@@ -8,4 +8,4 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* release ([792ff7b](https://github.com/fireyy/emoji-rate/commit/792ff7b))
+* release ([792ff7b](https://github.com/fireyy/emoji-vote/commit/792ff7b))
