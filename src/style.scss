@@ -19,7 +19,6 @@
             stroke: #ffdd67;
           }
           .emoji-facial-features {
-            fill: #664e27;
             transform: perspective(500px) translate3d(0, 0, 0) !important;
           }
         }
@@ -49,7 +48,7 @@
         transition: all .5s;
       }
       .emoji-facial-features {
-        fill: #999;
+        fill: currentColor;
         transform: perspective(500px) translate3d(5px, 0, 5px);
         transition: all .5s;
       }
