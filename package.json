@@ -5,6 +5,15 @@
   "main": "dist/emoji-vote.cjs.js",
   "module": "dist/emoji-vote.esm.js",
   "jsnext:main": "dist/emoji-vote.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fireyy/emoji-vote.git"
+  },
+  "keywords": [
+    "emoji",
+    "vote"
+  ],
+  "author": "fireyy <fireyy@gmail.com>",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^7.1.6",
